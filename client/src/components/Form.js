@@ -11,7 +11,7 @@ const Form = () => {
     const [email,setEmail]=useState('')
     const [number,setNumber]=useState('')
     const [data,setData]=useState([])
-    const [edit,setEdit]=useState(false)
+
 
     useEffect(()=>{
         getData()
@@ -26,7 +26,7 @@ const Form = () => {
             
         } catch (error) {
             console.log(error)
-            toast.error('server error')
+           
         }
 
     }
@@ -50,6 +50,7 @@ const Form = () => {
        setNumber('')
     }catch(error){
         console.log(error)
+        toast.error('server error')
     }
 }
 
@@ -110,7 +111,7 @@ onChange={(e)=>
         </form>
 
         <div>
-            {data &&
+            {data.length>0 ?
             <>
             <table>
                 <tr>
@@ -139,7 +140,7 @@ onChange={(e)=>
                 ))
                 }
             </table>
-            </>
+            </>: ' '
 }
         </div>
             

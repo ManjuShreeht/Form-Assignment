@@ -10,6 +10,12 @@ const createItems=async(req,res)=>{
                 message:"fill all the fields"
             })
         }
+        if(name.length<5){
+            return res.status(201).send({
+                success:false,
+                message:"name should be minimum 5 character"
+            }) 
+        }
         if(mobile.length!=10 ){
             return res.status(201).send({
                 success:false,
@@ -101,6 +107,24 @@ const deleteItem=async(req,res)=>{
 const updateItem=async(req,res)=>{
     const {name,email,mobile}=req.body
     try {
+        if(!name || !email || !mobile){
+            return res.status(201).send({
+                success:false,
+                message:"fill all the fields"
+            })
+        }
+        if(name.length<5){
+            return res.status(201).send({
+                success:false,
+                message:"name should be minimum 5 character"
+            }) 
+        }
+        if(mobile.length!=10 ){
+            return res.status(201).send({
+                success:false,
+                message:"enter 10 digits phone number"
+            }) 
+        }
         const item=await itemSchema.findByIdAndUpdate(req.params.id,
             req.body,
             {new:true}
