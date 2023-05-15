@@ -1,0 +1,69 @@
+form{
+    max-width:100%;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    gap:25px;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+input{
+    width:800px;
+    height:35px;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.col1{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    align-items: flex-start;
+    justify-content: center;
+}
+.col1 label{
+    font-size: 20px;
+    font-weight: 600;
+    width:100px;
+}
+.btn button{
+    padding: 10px 20px;
+    background-color: blue;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+table{
+    width:800px;
+    margin:100px;
+
+    
+    border-collapse: collapse;
+    border-radius: 10px;
+}
+td{
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+}
+table, th, td{
+    border-bottom: 1px solid black;
+}
+.edit button {
+    padding: 10px 15px;
+    font-size: 18px;
+    cursor: pointer;
+border-radius: 4px;
+color: green;
+border-color: green;
+}
+.delete button{
+    font-size: 18px;
+    color: red;
+    border-color: red;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
